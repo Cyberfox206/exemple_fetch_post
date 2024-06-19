@@ -14,4 +14,13 @@ class TestController extends BasseController
     {
         require VIEWS . '404.php';
     }
+
+    public function showHommePage(): void
+    {
+        require VIEWS . 'HomePage.php';
+    }
+    public function addMessage(): void
+    {
+        echo json_encode($_POST);
+    }
 }

@@ -7,5 +7,6 @@ require '../vendor/autoload.php';
 require SRC . 'helper.php';
 
 $router = new name\Router($_SERVER["REQUEST_URI"]);
-$router->get('/', 'TestController@showtest');
+$router->get('/', 'TestController@showHommePage');
+$router->post('/send_message/', 'TestController@addMessage');
 $router->run();
